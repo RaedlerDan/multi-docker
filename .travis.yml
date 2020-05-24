@@ -14,7 +14,7 @@ after_succes:
     - docker build -t raedlerdan/multi-server ./server
     - docker build -t raedlerdan/multi-worker ./worker
     # login to docker hub
-    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --pasword-stdin
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
     # Push images to docker hub
     - docker push raedlerdan/multi-client
     - docker push raedlerdan/multi-nginx
